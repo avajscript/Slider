@@ -1,4 +1,35 @@
 window.onload = () => {
+  // CREATE SLIDESHOW
+  const slideshowLength = 12;
+  const slideshowContainer = document.querySelector(
+    ".slideshow-selector-container"
+  );
+  const path = "./images/art_";
+  var animationReady = true;
+
+  // Functions
+
+  // Create slideshow
+  (function () {
+    for (let i = 1; i <= slideshowLength; i++) {
+      // Create slide
+      let slide = document.createElement("div");
+      slide.classList.add("slideshow-image");
+      slide.id = i;
+      // Add selected class to third image
+      if (i == 3) {
+        slide.classList.add("selected");
+      }
+      // Create img
+
+      let img = document.createElement("img");
+      img.src = `${path}${i}.jpg`;
+
+      slide.appendChild(img);
+      slideshowContainer.appendChild(slide);
+    }
+  })();
+
   // Variables
   const imageWidth = 200;
   const images = document.querySelectorAll(".slideshow-image");
@@ -56,17 +87,30 @@ window.onload = () => {
       image.classList.remove("selected");
     });
   }
+  function setAnimationReady() {
+    animationReady = true;
+    console.log("tri");
+  }
   // Gets the selected image when it's clicked
   function selected(e) {
+    if (!animationReady) {
+      return;
+    }
+    animationReady = false;
+    setTimeout(function () {
+      setAnimationReady();
+    }, 1000);
     let prevSelected = getSelected();
     removeSelected();
-    e.target.classList.add("selected");
-    greaterSmaller(e.target.id, prevSelected);
+    e.classList.add("selected");
+    greaterSmaller(e.id, prevSelected);
   }
 
   // Event listeners
 
   images.forEach((image) => {
-    image.addEventListener("click", selected);
+    image.addEventListener("click", (e) => {
+      selected(e.target.parentNode);
+    });
   });
 };

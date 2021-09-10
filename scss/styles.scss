@@ -29,38 +29,9 @@ $left: 100;
   width: 200px;
   height: 200px;
   cursor: pointer;
-  &:nth-of-type(1) {
-    background-color: red;
-  }
-  &:nth-of-type(2) {
-    background-color: blue;
-  }
-  &:nth-of-type(3) {
-    background-color: green;
-  }
-  &:nth-of-type(4) {
-    background-color: orange;
-  }
-  &:nth-of-type(5) {
-    background-color: black;
-  }
-  &:nth-of-type(6) {
-    background-color: pink;
-  }
-  &:nth-of-type(7) {
-    background-color: gold;
-  }
-  &:nth-of-type(8) {
-    background-color: indianred;
-  }
-  &:nth-of-type(9) {
-    background-color: aqua;
-  }
-  &:nth-of-type(10) {
-    background-color: brown;
-  }
-  &:nth-of-type(11) {
-    background-color: violet;
+  img {
+    object-fit: cover;
+    height: 100%;
   }
 }
 
@@ -69,12 +40,12 @@ $left: 100;
   height: auto;
   margin: 0 auto;
 }
+img {
+  width: 100%;
+}
 
 #main-img {
   width: 100%;
-  img {
-    width: 100%;
-  }
 }
 .selected {
   background-color: black !important;
