@@ -1,0 +1,80 @@
+:root {
+  --left: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.whole-wrapper {
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow-selector-container {
+  position: relative;
+  height: 200px;
+  width: 2200px;
+  transition: all 2s;
+  left: var(--left);
+}
+
+.slideshow-image {
+  float: left;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.slideshow-image:nth-of-type(1) {
+  background-color: red;
+}
+
+.slideshow-image:nth-of-type(2) {
+  background-color: blue;
+}
+
+.slideshow-image:nth-of-type(3) {
+  background-color: green;
+}
+
+.slideshow-image:nth-of-type(4) {
+  background-color: orange;
+}
+
+.slideshow-image:nth-of-type(5) {
+  background-color: black;
+}
+
+.slideshow-image:nth-of-type(6) {
+  background-color: pink;
+}
+
+.slideshow-image:nth-of-type(7) {
+  background-color: gold;
+}
+
+.slideshow-image:nth-of-type(8) {
+  background-color: indianred;
+}
+
+.slideshow-image:nth-of-type(9) {
+  background-color: aqua;
+}
+
+.slideshow-image:nth-of-type(10) {
+  background-color: brown;
+}
+
+.slideshow-image:nth-of-type(11) {
+  background-color: violet;
+}
+
+.selected {
+  background-color: black !important;
+}
