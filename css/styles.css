@@ -75,6 +75,20 @@
   background-color: violet;
 }
 
+.main-image-container {
+  width: 800px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#main-img {
+  width: 100%;
+}
+
+#main-img img {
+  width: 100%;
+}
+
 .selected {
   background-color: black !important;
 }

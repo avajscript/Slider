@@ -64,6 +64,18 @@ $left: 100;
   }
 }
 
+.main-image-container {
+  width: 800px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#main-img {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
 .selected {
   background-color: black !important;
 }
